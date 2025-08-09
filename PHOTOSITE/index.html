@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOUR NAME — Photography</title>
+  <meta name="description" content="Portfolio — YOUR NAME, editorial & landscape photographer" />
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">YOUR NAME</h1>
+      <nav class="nav">
+        <a href="#gallery">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Editorial & Landscape</h2>
+        <p>A curated selection of recent work.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery container" aria-label="Portfolio gallery">
+      <a href="#" class="thumb" data-index="0"
+         data-full="images/photo-1-2400.jpg"
+         data-caption="Title — Location (Year)">
+        <picture>
+          <source type="image/webp"
+            srcset="images/photo-1-800.webp 800w, images/photo-1-1600.webp 1600w">
+          <img src="images/photo-1-800.jpg"
+               srcset="images/photo-1-800.jpg 800w, images/photo-1-1600.jpg 1600w"
+               sizes="(max-width: 600px) 100vw, 50vw"
+               loading="lazy"
+               alt="Short description of photo 1">
+        </picture>
+      </a>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About</h3>
+      <p>Short bio, services, exhibitions, contact details.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+          Name <input type="text" name="name" required>
+        </label>
+        <label>
+          Email <input type="email" name="email" required>
+        </label>
+        <label>
+          Message <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close (Esc)">✕</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <div id="lb-caption" class="lb-caption"></div>
+    </div>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
